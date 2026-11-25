@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="王杰的个人主页，展示嵌入式系统、FPGA 图像处理和机器人控制方向的本科项目。">
+  <title>王杰 · 个人主页</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202c38;
+      --heading: #182b3e;
+      --muted: #455768;
+      --accent: #1b5176;
+      --line: #d7e0e6;
+      --paper: #fff;
+      --tint: #eef4f7;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-padding-top: 1rem; }
+    body {
+      margin: 0;
+      border-top: 5px solid var(--accent);
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.75 system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .page { width: min(900px, calc(100% - 3rem)); margin: 0 auto; }
+    .intro { padding: clamp(2.5rem, 7vw, 4.5rem) 0 1.5rem; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { color: var(--heading); line-height: 1.35; }
+    h1 {
+      margin-bottom: .65rem;
+      font: 700 clamp(2.5rem, 8vw, 4rem)/1.1 "Noto Serif SC", "Songti SC", SimSun, serif;
+    }
+    h1 span {
+      display: inline-block;
+      margin-left: .35em;
+      color: var(--muted);
+      font-size: .46em;
+      font-weight: 400;
+    }
+    .focus { margin-bottom: .65rem; color: var(--accent); font-weight: 650; }
+    .summary { max-width: 40rem; margin-bottom: 1.4rem; }
+    nav { display: flex; flex-wrap: wrap; gap: .4rem 1.45rem; }
+    nav a { color: var(--accent); font-size: .925rem; text-underline-offset: .2em; }
+    nav a:hover { text-decoration-thickness: 2px; }
+    nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    main { padding-bottom: 3rem; }
+    section { margin-top: 1.6rem; }
+    h2 {
+      margin-bottom: .85rem;
+      padding-bottom: .65rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.45rem;
+    }
+
+    .project { padding: 1.15rem 0 1.3rem; }
+    .project + .project { border-top: 1px solid var(--line); }
+    .project-head, .education-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .25rem 1.25rem;
+    }
+    .project h3, .education-head h3 { margin: 0; font-size: 1.17rem; }
+    .period { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+    .role { margin: .3rem 0 .65rem; color: var(--accent); font-size: .92rem; font-weight: 650; }
+    .project ul { margin: 0 0 .85rem; padding-left: 1.15rem; }
+    .project li + li { margin-top: .3rem; }
+    .award { margin: 0; padding: .45rem .85rem; border-left: 3px solid var(--accent); background: var(--tint); font-size: .91rem; }
+    .award strong { margin-right: .45em; color: var(--heading); }
+    .education-head { margin-bottom: .25rem; }
+    .details { margin-bottom: .45rem; }
+
+    .records { margin: 0; }
+    .records div { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: .4rem 1rem; padding: .35rem 0; }
+    .records dt { color: var(--muted); font-size: .9rem; }
+    .records dd { margin: 0; }
+
+    @media (max-width: 500px) {
+      .page { width: calc(100% - 2rem); }
+      .records div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .records div + div { margin-top: .35rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page intro">
+    <h1>王杰 <span lang="en">Wang Jie</span></h1>
+    <p class="focus">嵌入式系统 · FPGA 图像处理 · 机器人控制</p>
+    <p class="summary">本科就读于武汉理工大学电子信息工程专业。我做过机器人运动控制、自动检测设备和 FPGA 视觉系统，项目工作涉及软件、控制电路与机械结构。</p>
+    <nav aria-label="首页目录">
+      <a href="#undergraduate-projects">本科项目</a>
+      <a href="#education">教育经历</a>
+      <a href="#awards">其他荣誉</a>
+      <a href="#skills">技术栈</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section id="undergraduate-projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">本科项目</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>自动生化分析仪</h3>
+          <span class="period"><time datetime="2023-11">2023.11</time> – <time datetime="2024-08">2024.08</time></span>
+        </div>
+        <p class="role">项目主要负责人</p>
+        <ul>
+          <li>编写步进电机机械臂、蠕动泵和传感器的驱动，设计检测与清洗流程。</li>
+          <li>读取试纸和比色卡的 RGB 值，计算溶液浓度。</li>
+          <li>搭建供电、稳压与驱动电路，制作单片机主板，并为简化 SCARA 机械臂、试管盘和清洗池建模。</li>
+        </ul>
+        <p class="award"><strong>全国一等奖</strong> 全国大学生嵌入式芯片与系统设计竞赛</p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>自动分拣机器人</h3>
+          <span class="period"><time datetime="2023-08">2023.08</time> – <time datetime="2023-10">2023.10</time></span>
+        </div>
+        <p class="role">项目负责人</p>
+        <ul>
+          <li>实现麦克纳姆轮底盘的运动解算，编写电流环、速度环、位置环和角度环的闭环控制。</li>
+          <li>完成机械臂驱动和逆运动学解算，为机械臂及机器人连接件建模。</li>
+          <li>实现机器人运动过程中的物块颜色、形状和二维码识别。</li>
+        </ul>
+        <p class="award"><strong>全国一等奖</strong> 中国机器人大赛暨 RoboCup 机器人世界杯中国赛</p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>医疗物资搬运与分拣系统</h3>
+          <span class="period"><time datetime="2023-11">2023.11</time> – <time datetime="2024-08">2024.08</time></span>
+        </div>
+        <p class="role">负责图像处理，并制作主板</p>
+        <ul>
+          <li>在 FPGA 上实现 OV5640 摄像头驱动，编写 FIFO、SDRAM 和 HDMI 模块。</li>
+          <li>实现 RGB 到 HSV 的转换、Sobel 边缘检测，以及物块颜色和坐标识别。</li>
+          <li>负责制作运动控制主板，以及带 SDRAM 的图像处理主板。</li>
+        </ul>
+        <p class="award"><strong>全国二等奖</strong> 全国大学生集成电路创新创业大赛</p>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">教育经历</h2>
+      <div class="education-head">
+        <h3>武汉理工大学</h3>
+        <span class="period"><time datetime="2021-09">2021.09</time> – <time datetime="2025-06">2025.06</time></span>
+      </div>
+      <p class="details">电子信息工程 · 本科</p>
+      <p class="details">相关课程包括 C 语言程序设计、电路原理、单片机及嵌入式系统、数字电子技术。</p>
+    </section>
+
+    <section id="awards" aria-labelledby="awards-heading">
+      <h2 id="awards-heading">其他荣誉</h2>
+      <dl class="records">
+        <div><dt><time datetime="2024">2024</time></dt><dd>全国大学生电子设计竞赛湖北赛区二等奖</dd></div>
+        <div><dt><time datetime="2023">2023</time></dt><dd>全国大学生电子设计竞赛湖北赛区三等奖</dd></div>
+        <div><dt>2021–2022 学年</dt><dd>国家励志奖学金</dd></div>
+      </dl>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">技术栈</h2>
+      <dl class="records">
+        <div><dt>编程语言</dt><dd>C、Verilog、Python</dd></div>
+        <div><dt>开发平台</dt><dd>FPGA、STM32、OpenMV、K210</dd></div>
+        <div><dt>开发工具</dt><dd>Vivado、Keil、嘉立创 EDA、Multisim、SolidWorks</dd></div>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>
